@@ -6,23 +6,27 @@
 
 만약 잘못된 부분이 있다면 `Pull Request` 혹은 `Issue`를 남겨주시면 감사하겠습니다! 👏🏻
 
+
+
 ### 바로가기
 
-- [전공기초](#cs)
+- 전공기초
   - [OS](#os)
   - [Database](#database)
   - [Network](#network)
   - [Algorithm](#algorithm)
   - [Data Structure](#datastructure)
-- [언어](#language)
+- 언어
   - [Java](#java)
   - [C / C++](#c)
   - [Javascript](#javascript)
-- [Web](#web)
+- Web
   - [Front-End](#front)
   - [Back-end](#back)
 
-## # 전공 기초 <a id="cs"></a>
+
+
+## # 전공 기초
 
 ### [OS](/OS/README.md) <a id="os"></a>
 
@@ -34,7 +38,9 @@
 
 ### [Data Structure](/DataStructure/README.md) <a id="datastructure"></a>
 
-## # 언어 <a id="language"></a>
+
+
+## # 언어
 
 ### [Java](/Java/README.md) <a id="java"></a>
 
@@ -42,7 +48,9 @@
 
 ### [Javascript](/Javascript/README.md) <a id="javascript"></a>
 
-## # Web <a id="web"></a>
+
+
+## # Web
 
 ### [Front-End](/Front-End/README.md) <a id="front"></a>
 
