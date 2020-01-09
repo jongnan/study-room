@@ -2,8 +2,8 @@
 
 ### 무엇을 하는 공간인가?
 
-면접 준비를 하면서 면접 질문들과 관련 지식을 글로 남기는 공간입니다!
-만약 잘못된 부분이 있다면 `Pull Request` 혹은 `Issue`를 남겨주세요! 바로 수정하겠습니다!
+면접 준비를 하면서 면접 질문들과 관련 지식을 글로 남기는 공간입니다!  
+만약 잘못된 부분이 있다면 `Pull Request` 혹은 `Issue`를 남겨주세요! 바로 수정하겠습니다!  
 보고 도움이 되셨다면 ⭐️를 꾸욱 눌러주시면 감사하겠습니다! 👏🏻
 
 <br>
@@ -67,7 +67,10 @@
 
 ## # Web
 
-### [Front-End](/Front-End/README.md) <a id="front"></a>
+### [Front-End](/Front-End/README.md#title) <a id="front"></a>
+
+1. [브라우저의 기본 구성](/Front-End/README.md#1)
+2. [브라우저에서 렌더링 과정](/Front-End/README.md#2)
 
 <br>
 
