@@ -2,7 +2,7 @@
 
 > JAVA는 썬 마이크로시스템즈의 `제임스 고슬링`과 다른 연구원들이 개발한 객체 지향적 프로그래밍 언어이다.
 >
-> 출처 : [Java 위키 백과]([https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)](https://ko.wikipedia.org/wiki/자바_(프로그래밍_언어))
+> 출처 : [Java 위키 백과](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4))
 
 
 
