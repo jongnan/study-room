@@ -2,11 +2,11 @@
 
 <br>
 
-#### 브라우저의 기본 구성 <a id="1"></a>
+### 브라우저의 기본 구성 <a id="1"></a>
 
 ![브라우저 구성 요소](image/browser_structure.png)
 
-​ - 출처 : https://d2.naver.com/helloworld/59361
+ - 출처 : https://d2.naver.com/helloworld/59361
 
 브라우저의 구성은 다음과 같습니다.
 
@@ -20,13 +20,13 @@
 
 <br>
 
-#### 브라우저에서 렌더링 과정 <a id="2"></a>
+### 브라우저에서 렌더링 과정 <a id="2"></a>
 
 렌더링 엔진에서 렌더링 과정을 진행하며 종류는 웹킷(Webkit - 크롬, 사파리)과 게코(Gecko - 파이어폭스)등이 존재합니다.
 
 ![렌더링 과정](image/rendering.png)
 
-​ - 출처 : https://d2.naver.com/helloworld/59361
+ - 출처 : https://d2.naver.com/helloworld/59361
 
 렌더링 엔진은 사용자가 요청한 자원을 얻는 것부터 시작을 합니다. 보통 8KB 단위로 문서가 전송이 되며 이 데이터가 모두 받아졌을때 렌더링을 시작하는 것이 아닌 즉각 렌더링을 실행합니다.
 
@@ -44,6 +44,6 @@
 
 - 게코의 렌더링 과정
 
-  ​ - 출처 : https://d2.naver.com/helloworld/59361
+   - 출처 : https://d2.naver.com/helloworld/59361
 
 위 그림과 같이 웹킷과 게코가 다른 부분이 있지만, 의미적으로는 똑같은 동작을 하는 것을 알 수 있습니다.
