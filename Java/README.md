@@ -1,7 +1,8 @@
 # JAVA
 
 > JAVA는 썬 마이크로시스템즈의 `제임스 고슬링`과 다른 연구원들이 개발한 객체 지향적 프로그래밍 언어이다.
-> 																																출처 : [Java 위키 백과]([https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)](https://ko.wikipedia.org/wiki/자바_(프로그래밍_언어))
+>
+> 출처 : [Java 위키 백과]([https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)](https://ko.wikipedia.org/wiki/자바_(프로그래밍_언어))
 
 
 
@@ -40,6 +41,8 @@ Java Virtual Machine의 약자로 프로그램을 실행 시키기 위해 물리
 
 ​																																			출처 : [JVM Internal](https://d2.naver.com/helloworld/1230)
 
+
+
 JVM의 구조는 빨간선으로 되어있는 네모와 같이 생겼다.
 
 일단, 우리가 코딩한 Java 파일을 `Java Compiler`가 Byte code로 컴파일을 진행한다.
@@ -75,6 +78,8 @@ Byte code(.class)로 변경하는 이유는 JVM이 해석할 수 있도록 만�
 ![class_loader_model](https://d2.naver.com/content/images/2015/06/helloworld-1230-2.png)
 
 ​																																				출처 : [JVM Internal](https://d2.naver.com/helloworld/1230)
+
+
 
 * 부트스트랩 클래스 로더
 
@@ -119,6 +124,8 @@ Byte code(.class)로 변경하는 이유는 JVM이 해석할 수 있도록 만�
 ![runtime_data_areas](https://d2.naver.com/content/images/2015/06/helloworld-1230-4.png)
 
 ​																																			출처 : [JVM Internal](https://d2.naver.com/helloworld/1230)
+
+
 
 런타임 데이터 영역은 JVM이 OS 위에서 실행되며 할당받는 메모리 영역이다.
 총 6개의 영역으로 나뉠 수 있는데, 이 중 PC Register, JVM Stack, Native Method Stack의 경우 스레드 마다 하나씩 생성되며 나머지(Heap, Method Area, Runtime Constant Pool)은 모든 스레드가 공유해서 사용한다.
@@ -230,6 +237,8 @@ Stop-the-world란, 가비지 컬렉션을 실행하기 위해 JVM이 애플리�
 
 ​																																출처: [GC Algorithms: Basics](https://plumbr.io/handbook/garbage-collection-algorithms)
 
+
+
 `Root Set`은 다음과 같은 세가지 형태로 나뉜다.
 
 1. JVM Stack 내의 `Local Variable Section`과 `Operand Stack`에서의 참조
@@ -247,6 +256,8 @@ Stop-the-world란, 가비지 컬렉션을 실행하기 위해 JVM이 애플리�
 
   ​																									출처: [[JVM] Garbage Collection Algorithms](https://medium.com/@joongwon/jvm-garbage-collection-algorithms-3869b7b0aa6f)
 
+  
+
 * **Mark-and-Sweep Algorithm**
 
   `Reference Counting` 알고리즘의 단점을 보완하기 위해 나온 알고리즘으로 위에서 언급한 `Root Set`으로부터 쓰레기 객체를 찾는다.
@@ -262,6 +273,8 @@ Stop-the-world란, 가비지 컬렉션을 실행하기 위해 JVM이 애플리�
 
   ​																																출처: [GC Algorithms: Basics](https://plumbr.io/handbook/garbage-collection-algorithms)
 
+  
+
   또한, 위 그림과 같이 지우는 객체와 남길 객체가 뒤죽박죽으로 되어있어 외부 단편화 현상이 발생할 수 있다.
 
 * **Mark-and-Compact Algorithm**
@@ -275,6 +288,8 @@ Stop-the-world란, 가비지 컬렉션을 실행하기 위해 JVM이 애플리�
   ![mark compact](https://plumbr.io/app/uploads/2015/06/GC-mark-sweep-compact.png)
 
   ​																																출처: [GC Algorithms: Basics](https://plumbr.io/handbook/garbage-collection-algorithms)
+
+  
 
   Compaction 작업이 이루어진 후에 살아남은 객체들을 모두 업데이트를 하는 작업을 해주므로 부가적인 오버헤드가 발생할 수 있다는 단점도 존재한다.
 
@@ -291,6 +306,8 @@ Stop-the-world란, 가비지 컬렉션을 실행하기 위해 JVM이 애플리�
   ![](https://plumbr.io/app/uploads/2015/06/GC-mark-and-copy-in-Java.png)
 
   ​																																출처: [GC Algorithms: Basics](https://plumbr.io/handbook/garbage-collection-algorithms)
+
+  
 
   위 그림을 보면 GC를 수행하기 전에는 A영역이 Active 영역이며, B가 InActive 영역이다.
   하지만, GC를 수행한뒤의 A영역은 InActive 영역이 되고, B는 Active 영역이 된다.
@@ -405,6 +422,8 @@ GC 방식은 JDK 7을 기준으로 5개의 방식이 존재한다.
 
   ​																							출처 : [Garbage Collection (Hotspot JVM GC)](https://lazymankook.tistory.com/83)
 
+  
+  
   위의 그림처럼 바둑판 같은 공간이 논리적 단위(Region)이다.
   CMS와는 달리 Compaction 단계를 진행하며 단편화 문제를 없앴으며, Stop-the-world의 시간을 예측할 수 있다는 것이 가장 큰 장점중 하나이다.
 
