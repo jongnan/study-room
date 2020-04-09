@@ -10,68 +10,19 @@
 
 ### 바로가기
 
-- 전공기초
-  - [OS](#os)
-  - [Database](#database)
-  - [Network](#network)
-  - [Algorithm](#algorithm)
-  - [Data Structure](#datastructure)
-- 언어
-  - [Java](#java)
-  - [C / C++](#c)
-  - [Javascript](#javascript)
-- Web
-  - [Front-End](#front)
-  - [Back-end](#back)
-
-<br>
-<br>
-
-## # 전공 기초
-
-### [OS](/OS/README.md) <a id="os"></a>
-
-<br>
-
-### [Database](/Database/README.md) <a id="database"></a>
-
-<br>
-
-### [Network](/Network/README.md) <a id="network"></a>
-
-<br>
-
-### [Algorithm](/Algorithm/README.md) <a id="algorithm"></a>
-
-<br>
-
-### [Data Structure](/DataStructure/README.md) <a id="datastructure"></a>
-
-<br>
-<br>
-
-## # 언어
-
-### [Java](/Java/README.md) <a id="java"></a>
-
-<br>
-
-### [C/C++](/C&C++/README.md) <a id="c"></a>
-
-<br>
-
-### [Javascript](/Javascript/README.md) <a id="javascript"></a>
-
-<br>
-<br>
-
-## # Web
-
-### [Front-End](/Front-End/README.md#title) <a id="front"></a>
-
-1. [브라우저의 기본 구성](/Front-End/README.md#1)
-2. [브라우저에서 렌더링 과정](/Front-End/README.md#2)
-
-<br>
-
-### [Back-End](/Back-End/README.md) <a id="back"></a>
+- #### 전공기초
+  
+  - [OS](/OS/README.md)
+  - [Database](/Database/README.md)
+  - [Network](/Network/README.md)
+  - [Algorithm](/Algorithm/README.md)
+  - [Data Structure](/DataStructure/README.md)
+- #### 언어
+  
+  - [Java](/Java/README.md)
+  - [C / C++](/C&C++/README.md)
+  - [Javascript](/Javascript/README.md)
+- #### Web
+  
+  - [Front-End](/Front-End/README.md#title)
+  - [Back-end](/Back-End/README.md)
