@@ -2,5 +2,5 @@
 
 >Web 관련하여 전반적인 내용들을 모아놓은 곳입니다.
 
-* [REST](/REST.md)
+* [REST](/Common/REST.md)
 
