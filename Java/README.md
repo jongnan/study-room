@@ -31,7 +31,7 @@ Java Virtual Machine의 약자로 프로그램을 실행 시키기 위해 물리
 * Garbage Collection이란 것을 사용하여 사용자에 의해 생성된 클래스 인스턴스를 자동으로 파괴
 * 기본 자료형을 명확하게 정의하여 플랫폼에 종속적이지 않음을 보장
 * 네트워크 바이트 오더(빅 엔디안)를 사용
-  엔디엔에 알고싶다면 [여기]([https://ko.wikipedia.org/wiki/%EC%97%94%EB%94%94%EC%96%B8](https://ko.wikipedia.org/wiki/엔디언)) 를 참고하면 된다!
+  엔디엔에 알고싶다면 [여기](https://ko.wikipedia.org/wiki/엔디언) 를 참고하면 된다!
 
 
 
