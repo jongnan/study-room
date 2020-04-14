@@ -1,6 +1,6 @@
 # Interview for Developer - JOngNan's
 
-<center><img src="interview.png" width="400" height="400"></center>
+<p align="center"><img src="interview.png" width="400" height="400"></p>
 
 ### 무엇을 하는 공간인가?
 
