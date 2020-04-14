@@ -1,6 +1,6 @@
 # Interview for Developer - JOngNan's
 
-<t><t><t>![](interview.png)
+![](interview.png){: width="500" height="500"){: .center}
 
 ### 무엇을 하는 공간인가?
 
