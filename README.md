@@ -1,6 +1,6 @@
 # Interview for Developer - JOngNan's
 
-![](interview.png)
+<center><img src="interview.png" width="300" height="300"></center>
 
 ### 무엇을 하는 공간인가?
 
