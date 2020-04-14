@@ -1,5 +1,7 @@
 # Interview for Developer - JOngNan's
 
+![](interview.png)
+
 ### 무엇을 하는 공간인가?
 
 면접 준비를 하면서 면접 질문들과 관련 지식을 글로 남기는 공간입니다!  
