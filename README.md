@@ -16,7 +16,7 @@
 
 ### Network
 
-* [HTTP/HTTPS 이란 무엇인가?](/Network/HTTP-HTTPSmd)
+* [HTTP/HTTPS 이란 무엇인가?](/Network/HTTP-HTTPS.md)
 
 ### Algorithm
 
