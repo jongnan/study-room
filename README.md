@@ -8,24 +8,47 @@
 
 <br>
 
-### 바로가기
+## 전공 기초
 
-- #### 전공기초
-  
-  - [OS](/OS/README.md)
-  - [Database](/Database/README.md)
-  - [Network](/Network/README.md)
-  - [Algorithm](/Algorithm/README.md)
-  - [Data Structure](/DataStructure/README.md)
-  
-- #### 언어
-  
-  - [Java](/Java/README.md)
-  - [C / C++](/C&C++/README.md)
-  - [Javascript](/Javascript/README.md)
-  
-- #### Web
-  
-  - [Common](/Common/README.md)
-  - [Front-End](/Front-End/README.md)
-  - [Back-end](/Back-End/README.md)
+### OS
+
+### Database
+
+### Network
+
+* [HTTP/HTTPS 이란 무엇인가?](/Network/HTTP-HTTPSmd)
+
+### Algorithm
+
+### Data Structure
+
+<br>
+
+<br>
+
+## 언어
+
+### JAVA
+
+* [JVM](/Java/JVM.md)
+
+### C / C++
+
+### Javascript
+
+<br>
+
+<br>
+
+## Web
+
+### Common
+
+* [REST란?](/Common/REST.md)
+* [Web Server & WAS](/Common/WS-WAS.md)
+
+### Front-End
+
+* [브라우저 구성 및 렌더링 과정](/Front-End/browser_struct_rendering.md)
+
+### Back-End
