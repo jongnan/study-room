@@ -1,6 +1,6 @@
 # PostgreSQL
 
-![](https://miro.medium.com/max/1400/1*iNVrmliw1DH1O3Wx2m_ggA.gif)
+<p align="center"><img src="https://miro.medium.com/max/1400/1*iNVrmliw1DH1O3Wx2m_ggA.gif" width="800" height="300"></p>
 
 
 
@@ -56,7 +56,8 @@ Postgres의 물리적 구조는 굉장히 간단하다.
 
   포스트 마스터 프로세스는 PostgreSQL을 시작할 때 첫 번째로 시작되는 프로세스이다.  
   시작시 복구를 수행하며 공유 메모리를 포기화하고, 백그라운드 프로세스를 실행한다.  
-  또한, 클라이언트 프로세스로부터 연결 요청이 있을때 백엔드 프로세스를 작성한다.
+  또한, 클라이언트 프로세스로부터 연결 요청이 있을때 백엔드 프로세스를 작성한다. 
+
   ![](https://severalnines.com/sites/default/files/blog/node_5122/image2.jpg)
 
   출처 : [Understanding the PostgreSQL Architecture](https://severalnines.com/database-blog/understanding-postgresql-architecture)
