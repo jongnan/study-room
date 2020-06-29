@@ -106,5 +106,5 @@ Javascript 엔진 별로 인터프리터를 사용하여 바이트코드를 생�
 ### Reference
 
 * [컴파일러와 인터프리터란 무엇인가?](https://coding-factory.tistory.com/303)
-* [위키백과-인터프리터]([https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0](https://ko.wikipedia.org/wiki/인터프리터))
+* [위키백과-인터프리터](https://ko.wikipedia.org/wiki/인터프리터)
 * [JavaScript 엔진 톺아보기](https://velog.io/@godori/JavaScript-engine-1)
