@@ -1,3 +1,7 @@
+![ecma](image/ecma.jpg)
+
+<br>
+
 # ECMAScript
 
 Javascript를 공부할 때 ES3, ES5, ES6, ES2015 등 ES라는 것을 많이 들어봤을 것이다.  
