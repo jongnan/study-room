@@ -132,3 +132,16 @@ Web APIs는 브라우저에서 자체로 지원하는 API로 DOM 조작 혹은 A
 Queue라는 자료구조를 사용하고 있기 때문에 먼저 들어온 함수가 먼저 Call Stack으로 넘겨지는 동작을 한다.  
 위의 그림에서 하나의 Queue로 그려졌지만, 실제로 여러개의 Queue로 구성되어있다.
 
+---
+
+<br>
+
+<br>
+
+### Reference
+
+* [nodejs의 내부 동작 원리](https://sjh836.tistory.com/149)
+* [Javascript 동작원리 (Single thread, Event loop, Asynchronous)](https://medium.com/@vdongbin/javascript-작동원리-single-thread-event-loop-asynchronous-e47e07b24d1c)
+* [javascript 동작 원리 by programmer-seo](https://velog.io/@namezin/javascript-동작-원리)
+* [로우 레벨로 살펴보는 Node.js 이벤트 루프](https://evan-moon.github.io/2019/08/01/nodejs-event-loop-workflow/)
+
