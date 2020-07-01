@@ -42,6 +42,7 @@
 
 * [ECMAScript](/Javascript/ecmascript.md)
 * [Javascript 동작원리 - 엔진편](/Javascript/javascript_mechanism_engine.md)
+* [Javascript 동작원리 - 런타임편](/Javascript/javascript_mechanism_runtime.md)
 
 <br>
 
