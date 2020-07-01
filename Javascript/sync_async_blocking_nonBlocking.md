@@ -72,7 +72,7 @@ Blocking/Non-Blocking의 관심사는 '**호출된 함수가 바로 제어권을
 
 #### Async + Non-Blocking
 
-![a+n](/Users/jongnansmac/interview/Javascript/image/a+n.png)
+![a+n](image/a+n.png)
 
 이 조합 또한 많이 겪어 봤던 조합이다.  
 호출된 함수들은 바로 호출한 함수에게 제어권을 넘기고 자신이 완료 되면 Callback을 호출하여 자신이 완료되었다고 알린다.  
@@ -88,14 +88,14 @@ Node.js가 대표적인 예라고 할 수 있다.
 
 #### Sync + Non-Blocking
 
-![s+n](/Users/jongnansmac/interview/Javascript/image/s+n.png)
+![s+n](image/s+n.png)
 
 호출된 함수가 제어권을 바로 넘기기 때문에 호출 한 함수에서 계속해서 다른 작업을 할 수 있다.  
 하지만 특이하게 계속해서 호출된 작업을 호출한 함수에서 확인하고 있다.  
 
 #### Async + Blocking
 
-![a+b](/Users/jongnansmac/interview/Javascript/image/a+b.png)
+![a+b](image/a+b.png)
 
 또 다른 이상한 조합이 나왔는데, 비동기임에도 불구하고 제어권이 반환되지 않아 다음 코드를 실행하지 못한다.  
 Callback이 호출 되서야 제어권을 넘기게 되고, 이때부터 다시 다음 일을 진행할 수 있다.  
