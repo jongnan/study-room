@@ -49,7 +49,7 @@ Call Stack은 이름 그대로 Stack이란 자료구조를 사용하므로 LIFO(
 
 ### 런타임 환경
 
-![eventloop](image/eventloop.png)
+![eventloop](image/runtimeEnv.png)
 
 ​																																		출처 : [How JavaScript works](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
 
