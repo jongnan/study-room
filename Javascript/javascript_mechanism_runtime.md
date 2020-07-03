@@ -149,4 +149,5 @@ Microtask Queue는 Event Loop가 Macrotask들을 처리하기 전 혹은 후에 
 * [javascript 동작 원리 by programmer-seo](https://velog.io/@namezin/javascript-동작-원리)
 * [로우 레벨로 살펴보는 Node.js 이벤트 루프](https://evan-moon.github.io/2019/08/01/nodejs-event-loop-workflow/)
 * [Don’t block the event loop! 매끄러운 경험을 위한 JavaScript 비동기 처리](https://engineering.linecorp.com/ko/blog/dont-block-the-event-loop/)
+* [이벤트 루프와 매크로·마이크로태스크](https://ko.javascript.info/event-loop)
 
