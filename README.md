@@ -28,15 +28,11 @@
 
 <br>
 
-<br>
-
 ## 언어 🗣
 
 ### JAVA
 
 * [JVM](/Java/JVM.md)
-
-### C / C++
 
 ### Javascript
 
@@ -44,8 +40,7 @@
 * [Javascript 동작원리 - 엔진편](/Javascript/javascript_mechanism_engine.md)
 * [Javascript 동작원리 - 런타임편](/Javascript/javascript_mechanism_runtime.md)
 * [Sync/Async VS Blocking/Non-Blocking](/Javascript/sync_async_blocking_nonBlocking.md)
-
-<br>
+* [Execution Context](/Javascript/execution_context.md)
 
 <br>
 
