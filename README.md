@@ -41,6 +41,7 @@
 * [Javascript 동작원리 - 런타임편](/Javascript/javascript_mechanism_runtime.md)
 * [Sync/Async VS Blocking/Non-Blocking](/Javascript/sync_async_blocking_nonBlocking.md)
 * [Execution Context](/Javascript/execution_context.md)
+* [Prototype](/Javascript/prototype.md)
 
 <br>
 
