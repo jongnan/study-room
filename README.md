@@ -21,6 +21,7 @@
 ### Network
 
 * [HTTP/HTTPS 이란 무엇인가?](/Network/HTTP-HTTPS.md)
+* [OSI 7계층의 사용 이유와 각 계층의 역할](/Network/OSI7.md)
 
 ### Algorithm
 
