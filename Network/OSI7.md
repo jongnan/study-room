@@ -1,10 +1,12 @@
-![osi7layer_main](image/osi7layer_main.png)
+<img src="image/osi7layer_main.png" width=100% height="400">
 
 # OSI 7계층
 
 OSI(Open System Interconnection) 7 계층은 다음 그림 같이 네트워크 통신이 일어나는 과정을 7개의 계층 모델로 만들어 설명한 것이다.  
 
-![osi7model](image/osi7model.png)
+<p align="center"><img src="image/osi7model.png" width="500" height="200"></>
+
+
 
 즉, 우리가 웹 서핑을 하거나 다른 사람들과 온라인으로 게임을 하는 등 네트워크를 통해 하는 작업들은 이 과정을 그대로 한다는 것이다.  
 

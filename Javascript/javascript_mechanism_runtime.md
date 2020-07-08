@@ -49,7 +49,7 @@ Call Stack은 이름 그대로 Stack이란 자료구조를 사용하므로 LIFO(
 
 > 해당 글의 런타임 환경은 브라우저 기준으로 하고 있으며, 다른 런타임 환경과는 다를 수 있음을 알립니다.
 
-<p align="center"><img src="image/runtimeEnv.png" width="700" height="400"></p>
+<p align="center"><img src="image/runtimeEnv.png" width="700" height="400"></>
 
 ​																															출처 : [How JavaScript works](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
 
