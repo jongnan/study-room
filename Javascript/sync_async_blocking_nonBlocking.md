@@ -1,4 +1,4 @@
-<center><img src="image/sync.png" width="300" height="300"></center>
+<p align="center"><img src="image/sync.png" width="400" height="400"></p>
 
 # Sync/Async VS Blocking/Non-Blocking
 
@@ -23,7 +23,7 @@ Javascript를 접하다보면 비동기, Non-Blocking 등에 대해 들어봤을
 
 4가지 개념을 2X2 매트리스로 다음과 같이 나타낼 수 있다.
 
-<img src="image/2X2matrix.png" width="300" height="200">
+<p align="center"><img src="image/2X2matrix.png" width="300" height="200"></p>
 
 그림이 설명하고 싶은건 서로 다른 축에 존재하므로 분명 뭔가의 차이점이 있으며, 이 4가지 개념을 서로 조합하여 사용이 가능하다는 것이다.  
 과연 그 차이는 무엇에 있을까?
@@ -62,7 +62,7 @@ Blocking/Non-Blocking의 관심사는 '**호출된 함수가 바로 제어권을
 
 #### Sync + Blocking
 
-<img src="image/s+b.png" width="300" height="200">
+<p align="center"><img src="image/s+b.png" width="300" height="200"></p>
 
 해당 조합은 위 그림을 보면 알겠지만, 호출된 함수에게 제어권을 넘기고 반환 될 때까지 아무런 일도 못하고 기다리기만 한다.
 
@@ -70,7 +70,7 @@ Blocking/Non-Blocking의 관심사는 '**호출된 함수가 바로 제어권을
 
 #### Async + Non-Blocking
 
-<img src="image/a+n.png" width="300" height="200">
+<p align="center"><img src="image/a+n.png" width="300" height="200"></p>
 
 이 조합 또한 많이 겪어 봤던 조합이다.  
 호출된 함수들은 바로 호출한 함수에게 제어권을 넘기고 자신이 완료 되면 Callback을 호출하여 자신이 완료되었다고 알린다.  
@@ -86,14 +86,14 @@ Node.js가 대표적인 예라고 할 수 있다.
 
 #### Sync + Non-Blocking
 
-<img src="image/s+n.png" width="300" height="200">
+<p align="center"><img src="image/s+n.png" width="300" height="200"></p>
 
 호출된 함수가 제어권을 바로 넘기기 때문에 호출 한 함수에서 계속해서 다른 작업을 할 수 있다.  
 하지만 특이하게 계속해서 호출된 작업을 호출한 함수에서 확인하고 있다.  
 
 #### Async + Blocking
 
-<img src="image/a+b.png" width="300" height="200">
+<p align="center"><img src="image/a+b.png" width="300" height="200"></p>
 
 또 다른 이상한 조합이 나왔는데, 비동기임에도 불구하고 제어권이 반환되지 않아 다음 코드를 실행하지 못한다.  
 Callback이 호출 되서야 제어권을 넘기게 되고, 이때부터 다시 다음 일을 진행할 수 있다.  

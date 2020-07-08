@@ -1,4 +1,4 @@
-<img src="image/prototype_main.png" width=100% height="300">
+<img src="image/prototype_main.png" width=100% height="400">
 
 # Prototype
 
@@ -127,7 +127,7 @@ console.log(Human.prototype === jong.__proto__) //true
 
 위의 코드로 생성된 객체들을 그림으로 아래와 같다.
 
-<img src ="image/prototype_object.png" width="500" height="300">
+<p align="center"><img src ="image/prototype_object.png" width="500" height="400"></p>
 
 
 
@@ -258,7 +258,7 @@ ChildClass.prototype.constructor = ChildClass;
 
 위와 같은 코드를 사용해서 상속을 구현하면 다음과 같은 관계를 그림으로 그릴 수 있다.
 
-<img src ="image/prototype_extens.png" width="500" height="300">
+<p align="center"><img src ="image/prototype_extens.png" width="500" height="400"></p>
 
 
 

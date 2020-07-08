@@ -1,4 +1,4 @@
-<img src="image/javascript.png" width=100% height="300">
+<img src="image/javascript.png" width=100% height="400">
 
 # Javascript 동작 원리 - 엔진편
 

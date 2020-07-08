@@ -1,4 +1,4 @@
-<img src="image/executionContext.png" width=100% height="300">
+<img src="image/executionContext.png" width=100% height="400">
 
 # Execution Context
 
@@ -121,7 +121,7 @@ ES3에서 Variable Object와 비슷한 역할을 하고 있다.
 환경 레코드에는 **Declarative Environment Record**와 **Object Environment Record**라는 두 가지 주 종류로 나뉠 수 있다.  
 Funciton Environment와 Module Environment에서 사용되는 환경 레코드는 Declarative Environment Record이며, Global Environment에서는 특별하게  Declarative Environment Record와 Object Environment Record 둘다 사용한다.
 
-<center><img src="image/environment_record.png" width="700" height="300"></center>
+<p align="center"><img src="image/environment_record.png" width="700" height="300"></p>
 
 * Declarative Environment Record
 
