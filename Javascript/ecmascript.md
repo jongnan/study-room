@@ -1,6 +1,4 @@
-![ecma](image/ecma.jpg)
-
-<br>
+<img src="image/ecma.jpg" width=100% height="300">
 
 # ECMAScript
 

@@ -1,10 +1,8 @@
-![executionContext](image/executionContext.png)
-
-<br>
+<img src="image/executionContext.png" width=100% height="300">
 
 # Execution Context
 
-ECMAScript 스펙에서 실행 컨텍스트(Execution Context)는 **실행 가능한 코드로 형상화하고 구분하는 <u>추상적인 개념</u>**이라고 정의한다.  
+ECMAScript 스펙에서 실행 컨텍스트(Execution Context)는 **실행 가능한 코드로 형상화하고 구분하는 추상적인 개념**이라고 정의한다.  
 즉, **실행 컨텍스트 == 코드가 실행되기 위한 환경** 이라고 할 수 있다.
 
 Scope, Hoisting, This, Closure등 동작 원리를 담고있는 실행 컨텍스트에 대해 알아보자.
@@ -123,7 +121,7 @@ ES3에서 Variable Object와 비슷한 역할을 하고 있다.
 환경 레코드에는 **Declarative Environment Record**와 **Object Environment Record**라는 두 가지 주 종류로 나뉠 수 있다.  
 Funciton Environment와 Module Environment에서 사용되는 환경 레코드는 Declarative Environment Record이며, Global Environment에서는 특별하게  Declarative Environment Record와 Object Environment Record 둘다 사용한다.
 
-![environment_record](image/environment_record.png)
+<center><img src="image/environment_record.png" width="700" height="300"></center>
 
 * Declarative Environment Record
 
@@ -134,7 +132,7 @@ Funciton Environment와 Module Environment에서 사용되는 환경 레코드�
 
   > 객체 환경 레코드는 외부에 별도로 저장된 객체의 참조에서 데이터를 읽거나 사용하는데, 키와 값을 복사하는 것이 아닌 직접 해당 객체를 `bindObject`의 프로퍼티로 바인드하여 사용한다.
   >
-  > 글로벌 환경에서 객체 환경 레코드에는` bindObject`에 `window` 객체(브라우저의 경우)가 바인드 되어있으며, `Array`, `Object`와 같은 built-in global과 전역 코드에서 함수 선언, 제네레이터 선언, 변수 선언에 의해 생성된 식별자들을 binding object(= 전역 객체 = window 객체)에서 찾을 수 있다.
+  > 글로벌 환경에서 객체 환경 레코드에는 `bindObject`에 `window` 객체(브라우저의 경우)가 바인드 되어있으며, `Array`, `Object`와 같은 built-in global과 전역 코드에서 함수 선언, 제네레이터 선언, 변수 선언에 의해 생성된 식별자들을 binding object(= 전역 객체 = window 객체)에서 찾을 수 있다.
   >
   > 일반적인 객체 환경 레코드가 생성되는 시기는 `with` 문과 같이 식별자를 어떤 특정 객체에 속성으로 취급 할 때 사용된다.  
   > 이 때, binding object에는 해당 특정 객체를 가리킨다.
@@ -188,7 +186,7 @@ ExecutionContext = {
 }
 ```
 
-여기서 **<u>Lexical Environment(실제 변수화 함수들의 식별자가 매핑이 이루어지는 곳)와 LexicalEnvironment(Lexical Environment의 정보를 가리키는 곳)와는 다르다는 것</u>**을 알아야한다.
+여기서 "**Lexical Environment(실제 변수화 함수들의 식별자가 매핑이 이루어지는 곳)와 LexicalEnvironment(Lexical Environment의 정보를 가리키는 곳)와는 다르다는 것**"을 알아야한다.
 
 한가지의 값을 가리킬 꺼면 하나의 컴포넌트만 만들면 되지 왜 두개의 컴포넌트를 사용할까?  
 이 이유는 ES5와 ES6에서 다르다.
