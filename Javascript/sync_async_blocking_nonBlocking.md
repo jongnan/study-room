@@ -23,7 +23,7 @@ Javascript를 접하다보면 비동기, Non-Blocking 등에 대해 들어봤을
 
 4가지 개념을 2X2 매트리스로 다음과 같이 나타낼 수 있다.
 
-<p align="center"><img src="image/2X2matrix.png" width="300" height="200"></p>
+<img src="image/2X2matrix.png" width="300" height="200">
 
 그림이 설명하고 싶은건 서로 다른 축에 존재하므로 분명 뭔가의 차이점이 있으며, 이 4가지 개념을 서로 조합하여 사용이 가능하다는 것이다.  
 과연 그 차이는 무엇에 있을까?
