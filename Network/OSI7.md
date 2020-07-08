@@ -4,7 +4,7 @@
 
 OSI(Open System Interconnection) 7 계층은 다음 그림 같이 네트워크 통신이 일어나는 과정을 7개의 계층 모델로 만들어 설명한 것이다.  
 
-<p align="center"><img src="image/osi7model.png" width="500" height="200"></>
+<p align="center"><img src="image/osi7model.png" width="600" height="300"></>
 
 
 
