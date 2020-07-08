@@ -1,7 +1,5 @@
 <img src="image/javascript.png" width=100% height="400">
 
-<br>
-
 # Javascript 동작 원리 - 런타임편
 
 시작하기 앞서  Javascript는 "<u>**Run-to-Completion**</u>"이라는 특징을 가지며 동작을 한다.  
