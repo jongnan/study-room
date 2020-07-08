@@ -58,7 +58,7 @@ Call Stack은 이름 그대로 Stack이란 자료구조를 사용하므로 LIFO(
 위 그림은 Javascript의 런타임 환경(브라우저)을 나타낸 그림이다.  
 Call Stack과 Memory Heap이 있는 것을 보면 왼쪽 사각형은 Javascript 엔진인 것을 알 수 있다.
 
-여기서 **<u>Event Loop</u>**가 등장하는데 이가 동시성 문제를 해결해주는 가장 중요한 키포인트이다.  
+여기서 <u>**Event Loop**</u>가 등장하는데 이가 동시성 문제를 해결해주는 가장 중요한 키포인트이다.  
 
 #### Event Loop
 
@@ -67,9 +67,8 @@ Call Stack과 Memory Heap이 있는 것을 보면 왼쪽 사각형은 Javascript
 * Blocking / Non-Blocking
 
   > 코드가 실행되다 함수를 만나게 되었을 때, 해당 함수에게 제어권을 넘겨 아무런 작업을 하지 못하는 상태를 "**Blocking** 되었다." 라고 한다.
->
+  >
   > 이와 반대로 제어권을 바로 반환 받고 다음 작업을 할 수 있는 상태를 "**Non-Blocking**"라고 한다.
-  
 * 동기(Synchronous) / 비동기(Asychronous)
 
   > **동기(Synchronous)**는 호출한 함수가 반환이 되었나 계속해서 신경을 쓰고 있는 것을 말한다.
