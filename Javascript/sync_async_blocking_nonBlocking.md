@@ -36,7 +36,7 @@ Javascript를 접하다보면 비동기, Non-Blocking 등에 대해 들어봤을
 
 #### Synchronous/Asychronous
 
-동기/비동기의 관심사는 '**호출되는 함수의 완료 여부를 누가 신경을 쓰느냐**'이다.
+동기/비동기의 관심사는 "**호출되는 함수의 완료 여부를 누가 신경을 쓰느냐**"이다.
 
 호출하는 함수가 호출되는 함수의 작업의 반환을 기다리거나 반환을 받아도 작업이 완료가 되었는지 계속해서 여부를 물어보면서 확인하는 것이 "**동기**"이다.
 
@@ -47,7 +47,7 @@ Javascript를 접하다보면 비동기, Non-Blocking 등에 대해 들어봤을
 
 #### Blocking/Non-Blocking
 
-Blocking/Non-Blocking의 관심사는 '**호출된 함수가 바로 제어권을 넘겨 주느냐**'이다.
+Blocking/Non-Blocking의 관심사는 "**호출된 함수가 바로 제어권을 넘겨 주느냐**"이다.
 
 호출된 함수가 자신의 작업을 다 마칠 때까지 호출한 함수에게 제어권을 넘겨주지 않고 대기하게 만들면 "**Blocking**"이다.
 
@@ -62,7 +62,7 @@ Blocking/Non-Blocking의 관심사는 '**호출된 함수가 바로 제어권을
 
 #### Sync + Blocking
 
-<p align="center"><img src="image/s+b.png" width="300" height="200"></p>
+<img src="image/s+b.png" width="300" height="200">
 
 해당 조합은 위 그림을 보면 알겠지만, 호출된 함수에게 제어권을 넘기고 반환 될 때까지 아무런 일도 못하고 기다리기만 한다.
 
@@ -70,7 +70,7 @@ Blocking/Non-Blocking의 관심사는 '**호출된 함수가 바로 제어권을
 
 #### Async + Non-Blocking
 
-<p align="center"><img src="image/a+n.png" width="300" height="200"></p>
+<img src="image/a+n.png" width="300" height="200">
 
 이 조합 또한 많이 겪어 봤던 조합이다.  
 호출된 함수들은 바로 호출한 함수에게 제어권을 넘기고 자신이 완료 되면 Callback을 호출하여 자신이 완료되었다고 알린다.  
@@ -86,14 +86,14 @@ Node.js가 대표적인 예라고 할 수 있다.
 
 #### Sync + Non-Blocking
 
-<p align="center"><img src="image/s+n.png" width="300" height="200"></p>
+<img src="image/s+n.png" width="300" height="200">
 
 호출된 함수가 제어권을 바로 넘기기 때문에 호출 한 함수에서 계속해서 다른 작업을 할 수 있다.  
 하지만 특이하게 계속해서 호출된 작업을 호출한 함수에서 확인하고 있다.  
 
 #### Async + Blocking
 
-<p align="center"><img src="image/a+b.png" width="300" height="200"></p>
+<img src="image/a+b.png" width="300" height="200">
 
 또 다른 이상한 조합이 나왔는데, 비동기임에도 불구하고 제어권이 반환되지 않아 다음 코드를 실행하지 못한다.  
 Callback이 호출 되서야 제어권을 넘기게 되고, 이때부터 다시 다음 일을 진행할 수 있다.  
