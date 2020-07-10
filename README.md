@@ -56,5 +56,6 @@
 ### Front-End
 
 * [브라우저 구성 및 렌더링 과정](/Front-End/browser_struct_rendering.md)
+* [이벤트 버블링 VS 이벤트 캡쳐링](/Front-End/bubbling_capturing.md)
 
 ### Back-End
