@@ -34,6 +34,8 @@
 ### JAVA
 
 * [JVM](/Java/JVM.md)
+* [Garbage Collection](/Java/GC.md)
+* [Data  Type](/Java/data_type.md)
 
 ### Javascript
 
