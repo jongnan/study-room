@@ -7,9 +7,9 @@ ECMAScript 스펙에서 실행 컨텍스트(Execution Context)는 **실행 가�
 
 Scope, Hoisting, This, Closure등 동작 원리를 담고있는 실행 컨텍스트에 대해 알아보자.
 
----
+<br>
 
-### 코드 실행에 필요한 정보들
+## 코드 실행에 필요한 정보들
 
 자바스크립트 엔진은 코드를 실행하기 위해 다음과 같은 정보들을 알고 있어야 한다.
 
@@ -20,9 +20,9 @@ Scope, Hoisting, This, Closure등 동작 원리를 담고있는 실행 컨텍스
 
 이런 정보들을 형상화하기 위해 자바스크립트 엔진은 실행 컨텍스트를 물리적 객체 형태로 저장하여 관리하게 된다.
 
----
+<br>
 
-### 종류
+## 종류
 
 실행 컨텍스트는 3가지 종류로 나뉘어지는데 다음과 같다.
 
@@ -41,9 +41,9 @@ Scope, Hoisting, This, Closure등 동작 원리를 담고있는 실행 컨텍스
 
   > Eval 함수 내에서 실행되는 코드 또한 실행 컨텍스트를 생성할 수 있지만, Eval 사용을 지양하고 있다.
 
----
+<br>
 
-### Execution Stack
+## Execution Stack
 
 실행 스택은 우리가 잘 알고 있는 자바스크립트 엔진 속의 Call Stack과 같은 것이다.  
 Call Stack에서 실행 컨텍스트를 사용하기 때문에 실행 스택이라고도 불리우는 것이다.  
@@ -75,20 +75,20 @@ first(name);
 
 ![exe_stack_ex](image/exe_stack_ex.png)
 
----
+<br>
 
-### 실행 컨텍스트 생성 과정
+## 실행 컨텍스트 생성 과정
 
 > 실행 컨텍스트는 ES3, ES5, ES6마다 개념이 다 다르다. 본 글에서는 ES6에서 정의한 실행 컨텍스트를 살펴 볼 것이다. ES3에서의 실행 컨텍스트는 [여기](https://poiemaweb.com/js-execution-context)를 보면 되고, ES5는 [이 글](http://dmitrysoshnikov.com/ecmascript/es5-chapter-3-2-lexical-environments-ecmascript-implementation/)을 보면 좋을 것 같다.
 
-#### Lexical Environment
+### Lexical Environment
 
 > *A Lexical Environment is a specification type used to define the association of Identifiers to specific variables and functions based upon the lexical nesting structure of ECMAScript code.* - ES6
 
 ES6에 따르면 다음과 같이 렉시컬 환경을 설명하고 있다.  
 쉽게 해석해 보면 렉시컬 환경이란 곳에 선언한 변수 이름(식별자)와 값(변수)를 매핑을 가지고 있는 것이다.
 
-렉시컬 환경은 범위 내에 있는 바인딩 된 식별자들을 기록하는 곳인 **Environment Record**와 **외부 렉시컬 환경을 참조할 수 있는 포인터** 및 **This binding**으로 구성된다..  
+렉시컬 환경은 범위 내에 있는 바인딩 된 식별자들을 기록하는 곳인 **Environment Record**와 **외부 렉시컬 환경을 참조할 수 있는 포인터** 및 **This binding**으로 구성된다.  
 이 외부 렉시컬 환경을 참조함으로써 렉시컬 스코핑을 가능하게 한다.  
 즉, 외부 렉시컬 환경을 타고 가며 현재 컨텍스트가 아닌 외부 컨텍스트의 변수 혹은 함수에 접근이 가능하다는 것이다.
 
@@ -113,7 +113,7 @@ ES6에 따르면 다음과 같이 렉시컬 환경을 설명하고 있다.
 
 이제 렉시컬 환경 내부에 있는 값들에 대해 더 자세히 살펴보자.
 
-#### Evironment Record
+### Evironment Record
 
 환경 레코드는 유효 범위 안에 포함된 식별자를 기록하고 실행하는 영역이다.  
 ES3에서 Variable Object와 비슷한 역할을 하고 있다.
@@ -137,13 +137,13 @@ Funciton Environment와 Module Environment에서 사용되는 환경 레코드�
   > 일반적인 객체 환경 레코드가 생성되는 시기는 `with` 문과 같이 식별자를 어떤 특정 객체에 속성으로 취급 할 때 사용된다.  
   > 이 때, binding object에는 해당 특정 객체를 가리킨다.
 
-#### Outer Environment 참조
+### Outer Environment 참조
 
 해당 포인터가 있으므로써 외부 환경에 접근 할 수 있다는 것을 의미하며, 이는 중첩된 환경에서 렉시컬 스코핑을 가능하게 한다.    
 즉, 렉시컬 스코프 범위 내에서 원하는 변수 혹은 함수를 찾기 위해 해당 포인터를 사용하는 것이다.  
 이는 ES3에서 Scope Chain과 같은 역할을 하고 있지만, Scope Chain은 리스트 형태로 이를 보관하고 여기서는 포인터 형태로 이를 관리한다.
 
-#### This Binding
+### This Binding
 
 `this` 값이 여기에 저장된다.  
 글로벌 실행 컨텍스트에서의 `this`는 글로벌 객체(window 객체)이며, 함수 실행 컨텍스트에서는 함수가 어떻게 호출됬는지에 따라 달라진다.  
@@ -163,7 +163,7 @@ const sayMyName = my.say;
 sayMyname(); 	// this : window, out : 안녕 난 (undefined)이야!
 ```
 
-#### 실행 컨텍스트 컴포넌트
+### 실행 컨텍스트 컴포넌트
 
 실행 컨텍스트에는 두가지 컴포넌트가 존재하는데, **LexicalEnvironment**와 **VariableEnvironment**이다.
 두 컴포넌트 다 항상 위에서 언급한 Lexical Environment로 이루어지며, LexicalEnvironment와 VariableEnvironment는 초기에 같은 값으로 설정 된다.
