@@ -32,7 +32,7 @@ Java 코드가 실행되는 전체 과정은 위 그림과 같으며, 빨간색 
 
 일단, 우리가 코딩한 Java 파일을 `Java Compiler`가 Byte code로 컴파일을 진행한다.  
 Byte code(.class)로 변경하는 이유는 JVM이 해석할 수 있도록 만들기 위함이다.(기계어로 변경하는 이유와 동일)  
-이렇게 변경된 파일(.class)을 **클래스 로더(Class Loader)**가 **런타임 데이터 영역(Runtime Data Areas)**에 로드하며, **실행 엔진(Execution Engine)**은 바이트 코드를 기계어로 변경하여 수행을 한다.
+이렇게 변경된 파일(.class)을 **클래스 로더(Class Loader)** 가 **런타임 데이터 영역(Runtime Data Areas)** 에 로드하며, **실행 엔진(Execution Engine)** 은 바이트 코드를 기계어로 변경하여 수행을 한다.
 
 ---
 
