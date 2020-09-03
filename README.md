@@ -1,6 +1,6 @@
-# Private Study Room - JOngNan's
+# Study Room - JOngNan's
 
-<p align="center"><img src="interview.png" width="400" height="400"></p>
+<p align="center"><img src="main.jpg"></p>
 
 ### 무엇을 하는 공간인가?
 
@@ -10,7 +10,7 @@
 
 <br>
 
-## 전공 기초 📃
+## Computer Science 🏗
 
 ### OS
 
@@ -29,7 +29,7 @@
 
 <br>
 
-## 언어 🗣
+## 언어 💬
 
 ### JAVA
 
@@ -50,7 +50,7 @@
 
 <br>
 
-## Web 📧
+## Web 💻
 
 ### Common
 
