@@ -1,11 +1,11 @@
-# Interview for Developer - JOngNan's
+# Private Study Room - JOngNan's
 
 <p align="center"><img src="interview.png" width="400" height="400"></p>
 
 ### 무엇을 하는 공간인가?
 
-면접 준비를 하면서 면접 질문들과 관련 지식을 글로 남기는 공간입니다!  
-만약 잘못된 부분이 있다면 `Pull Request` 혹은 `Issue`를 남겨주세요! 바로 수정하겠습니다!  
+면접 준비 혹은 개인 공부를 하기 위해 관련 지식들을 글로 남기는 공간입니다!
+만약 잘못된 부분이 있다면 `Pull Request` 혹은 `Issue`를 남겨주세요. :)
 보고 도움이 되셨다면 ⭐️를 꾸욱 눌러주시면 감사하겠습니다! 👏🏻
 
 <br>
