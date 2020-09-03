@@ -171,18 +171,18 @@ sayMyname(); 	// this : window, out : 안녕 난 (undefined)이야!
 ```javascript
 //생성 초기 실행 컨텍스트
 ExecutionContext = {
-  //LexicalEnvironment 컴포넌트
+	//LexicalEnvironment 컴포넌트
 	LexicalEnvironment : <Lexical Environment> = {
 		EnvironmentRecord : {},
-  	outer : <>,
-    thisBinding : <>
+  		outer : <>,
+    		thisBinding : <>
 	},
-  //VariableEnvironment 컴포넌트
-  VariableEnvironment : <Lexical Environment> = {
-  	EnvironmentRecord : {},
-  	outer : <>,
-    thisBinding : <>
-  }
+	//VariableEnvironment 컴포넌트
+	VariableEnvironment : <Lexical Environment> = {
+  		EnvironmentRecord : {},
+  		outer : <>,
+    		thisBinding : <>
+  	}
 }
 ```
 
@@ -208,21 +208,21 @@ var c = 3;
 
 ```javascript
 GlobalExecutionContext = {
-  LexicalEnvironment : {
-    EnvironmnetRecord : {
-      a : <uninitialized>,
-      b : <uninitialized>
-    },
-    outer : null,
-    thisBinding : window
-  },
-  VariableEnvironment : {
-    EnvironmnetRecord : {
-      c : undefined
-    },
-    outer : null,
-    thisBinding : window
-  }
+	LexicalEnvironment : {
+    		EnvironmnetRecord : {
+      			a : <uninitialized>,
+      			b : <uninitialized>
+    		},
+    		outer : null,
+    		thisBinding : window
+  	},
+  	VariableEnvironment : {
+    		EnvironmnetRecord : {
+      			c : undefined
+    		},
+    		outer : null,
+    		thisBinding : window
+  	}
 }
 ```
 
@@ -230,21 +230,21 @@ GlobalExecutionContext = {
 
 ```javascript
 GlobalExecutionContext = {
-  LexicalEnvironment : {
-    EnvironmnetRecord : {
-      a : 1,
-      b : 2
-    },
-    outer : null,
-    thisBinding : window
-  },
-  VariableEnvironment : {
-    EnvironmnetRecord : {
-      c : undefined
-    },
-    outer : 3,
-    thisBinding : window
-  }
+  	LexicalEnvironment : {
+    		EnvironmnetRecord : {
+      			a : 1,
+   			b : 2
+    		},
+    		outer : null,
+    		thisBinding : window
+  		},
+  	VariableEnvironment : {
+    		EnvironmnetRecord : {
+      			c : undefined
+    		},
+    		outer : 3,
+    		thisBinding : window
+  	}
 }
 ```
 
