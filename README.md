@@ -1,6 +1,6 @@
 # Study Room - JOngNan's
 
-<img align="center" src="./main.jpg" />
+<img align="center" src="./main.jpg" width="100px" />
 
 ### 무엇을 하는 공간인가?
 
