@@ -1,4 +1,4 @@
-<img src="image/javascript.png" width=100% height="400">
+<img src="image/javascript.png" width=100%>
 
 # Javascript 동작 원리 - 런타임편
 
@@ -11,20 +11,20 @@ Run-to-Completion이란, 하나의 작업이 시작되면 끝나기 전까지는
 하나의 일만 하는 것이 아닌 다른 작업도 동시에 일어난다.  
 다른 작업이 동시에 처리가 될 수 없는데 어떻게 이런 동작을 보여주는 것일까?
 
----
+<br>
 
-### Single Thread
+## Single Thread
 
 Javascript가 Run-to-Completion으로 동작하는 이유는 바로 하나의 스레드로만 실행이 되기 때문이다. 
 싱글 스레드로 동작하는 방식이기에 <u>**하나의 스택 영역과 힙 영역**</u>을 가진다.
 
 이 스택과 힙은 Javascript 엔진 안에 존재하며 스택은 **Call Stack**, 힙은 **Memory Heap** 이라고 불린다.
 
-#### Memory Heap
+### Memory Heap
 
 변수화 객체에 대한 메모리 할당이 이루어지는 곳이며, 구조화되지 않은 넓은 메모리 영역이다.
 
-#### Call Stack
+### Call Stack
 
 메모리에 존재하고 있는 공간 중에 하나로, 여러 개의 함수들이 호출되고 반환되는 실행 환경에서 함수들을 기록하고 이를 추적할 수 있도록 도와주는 데이터 구조이다.
 
@@ -43,9 +43,9 @@ Call Stack은 이름 그대로 Stack이란 자료구조를 사용하므로 LIFO(
 그렇다면 <u>**동시성 문제**</u>는 어떻게 해결하는 것일까?  
 이는 Javascript가 실행되는 환경을 살펴보면 알 수 있다.
 
----
+<br>
 
-### 런타임 환경
+## 런타임 환경
 
 > 해당 글의 런타임 환경은 브라우저 기준으로 하고 있으며, 다른 런타임 환경과는 다를 수 있음을 알립니다.
 
@@ -57,7 +57,7 @@ Call Stack과 Memory Heap이 있는 것을 보면 왼쪽 사각형은 Javascript
 
 여기서 **Event Loop**가 등장하는데 이가 동시성 문제를 해결해주는 가장 중요한 키포인트이다.  
 
-#### Event Loop
+### Event Loop
 
 싱글 스레드인 Javascript가 **Non-Blocking**,  **비동기**적으로 동작할 수 있도록 도와주며 엔진을 통해 코드를 실행하는 등의 많은 일을 관장하고 있다.
 
@@ -107,12 +107,12 @@ while(queue.waitForMessage()){
 Call Stack 뿐만 아니라 Callback Queue에서 먼저 빠져나간 함수들 중에서도 이런 상황이 벌어질 수 도 있다.  
 그렇기 때문에 우리가 최대한으로 원하는대로 동작하기 위해 Event Loop 내부 과정들을 상세히 살펴보고 이를 회피해 나갈 적절한 방법을 모색해야 한다.
 
-#### Web APIs
+### Web APIs
 
 Web APIs는 브라우저에서 자체로 지원하는 API로 DOM 조작 혹은 AJAX, setTimeout 등의 비동기 작업들을 수행할 수 있도록 도와준다.  
 이는 웹에서 사용되는 API들이며, Node.js의 경우 Node.js에서 지원하는 라이브러리나 API를 사용할 수 있다.
 
-#### Callback Queue(Task Queue)
+### Callback Queue(Task Queue)
 
 비동기 작업시에는 이 Task Queue에 들어가게 되는데 이러한 Task Queue를 V8 용어로는 **Macrotask Queue** 라고 한다.  
 
@@ -131,6 +131,8 @@ Macrotask Queue에는 해당 작업들이 차례대로 들어오게 되며, 들�
 
 Microtask Queue는 Event Loop가 Macrotask들을 처리하기 전 혹은 후에 그리고 렌더링 전에 큐 안에 있는 모든 작업들을 처리한다.  
 이러한 Microtask를 만들기 위해서는 ES6에서 새롭게 등장한 **Promise** 혹은 `queueMicrotask(func)`를 통해 만들 수 있다.
+
+<br>
 
 ---
 
