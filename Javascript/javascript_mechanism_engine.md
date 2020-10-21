@@ -1,4 +1,4 @@
-<img src="image/javascript.png" width=100% height="400">
+<img src="image/javascript.png" width=100%>
 
 # Javascript 동작 원리 - 엔진편
 
@@ -95,6 +95,8 @@ Javascript 엔진 별로 인터프리터를 사용하여 바이트코드를 생�
 * 최적화 혹은 다시 돌리는 과정에서 바이트코드 하나만 생각하면 되기에 컴파일 파이프 라인의 복잡성이 감소한다.
 
 또한 Javascript에서는 다른 언어와 다르게 자료형이 실행 시점에서 동적으로 할당되기에 기계어로 컴파일시에는 해당 자료형을 유추하기가 바이트코드에 비해 어렵다는 이유도 존재한다.
+
+<br>
 
 ---
 
