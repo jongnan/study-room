@@ -44,7 +44,7 @@ Class 기반의 언어들은 객체를 생성할 때 클래스를 따로 작성�
 
 ```javascript
 const my = {
-	name : 'jongnan',
+  name : 'jongnan',
   age : 28,
   say : function () {
     console.log('안녕!');
@@ -68,7 +68,7 @@ const my = {
 
 ```javascript
 const my = new Object({
-	name : 'jongnan',
+  name : 'jongnan',
   age : 28,
   say : function () {
     console.log('안녕!');
@@ -106,8 +106,8 @@ console.log(jong);
 
 Human {
   __proto__ : {
-    constructor: f Human(),
-    __proto__ : Object  		// 해당 Object를 살펴보면 Object로 생성된 결과와 같은 결과가 나온다.
+     constructor: f Human(),
+     __proto__ : Object  		// 해당 Object를 살펴보면 Object로 생성된 결과와 같은 결과가 나온다.
   }
 }
 
@@ -186,11 +186,11 @@ console.log(jong.sayMyName === nan.sayMyName) // false
 
 ```javascript
 function Human(name) {
-	this.name = name;
+  this.name = name;
   this.age = 28;
 }
 Human.prototype.sayMyAge = function() {
-	console.log("난 " + this.age + "살이야.");
+  console.log("난 " + this.age + "살이야.");
 }
 
 const jong = new Human('jong');
@@ -229,8 +229,8 @@ console.log(jong.sayMyAge === nan.sayMyAge);	// true
 상속을 하는 대표적인 방법으로는 `Object.create`메소드를 이용하는 것이다.
 
 ```javascript
-			 //인자1:원본 객체	 인자2:새로 생성할 객체의 추가 프로퍼티(객체)
-Object.create(proto: Object, properties?: Object)
+	      //인자1:원본 객체   인자2:새로 생성할 객체의 추가 프로퍼티(객체)
+  Object.create(proto: Object, properties?: Object)
 ```
 
 두 번째 인자는 단순하게 객체를 넘기는 것이 아닌 데이터 서술자와 접근 서술자를 지정해줘야 한다.  
