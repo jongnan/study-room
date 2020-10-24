@@ -106,7 +106,7 @@ array_2 = array_1;
 
 ```java
 for(int idx = 0; idx < array_1.size(); idx++){
-	array_2[idx] = array_1[idx];
+  array_2[idx] = array_1[idx];
 }
 ```
 
@@ -117,9 +117,9 @@ for(int idx = 0; idx < array_1.size(); idx++){
 배열 타입은 기본형 혹은 참조형으로도 만들 수 있다.  
 
 ```java
-int [] numArr = new int[5];								//기본형
-int [][] twoDimenNumArr = new int[5][5];	//[][]를 사용하면 2차원 배열을 만들 수 있다.
-Object[] objectArr = new Object[5];				//참조형
+int [] numArr = new int[5];		  //기본형
+int [][] twoDimenNumArr = new int[5][5];  //[][]를 사용하면 2차원 배열을 만들 수 있다.
+Object[] objectArr = new Object[5];	  //참조형
 ```
 
 ### Enum
@@ -128,7 +128,7 @@ Object[] objectArr = new Object[5];				//참조형
 
 ```java
 enum BloodType {
-	A, B, O, AB
+  A, B, O, AB
 }
 ```
 
@@ -139,10 +139,10 @@ enum BloodType {
 
 ```java
 interface CalcInterface<T> {
-	T add(T value, T value);
-	T sub(T value, T value);
-	T mul(T value, T value);
-	T div(T value, T value);
+  T add(T value, T value);
+  T sub(T value, T value);
+  T mul(T value, T value);
+  T div(T value, T value);
 }
 ```
 
@@ -152,7 +152,7 @@ interface CalcInterface<T> {
 
 ```java
 class Person {
-	private String name;
+  private String name;
   private int age;
   Person(String name, int age){
     this.name = name;
@@ -172,7 +172,6 @@ class Person {
 > - clone() - 객체와 동일한 클래스의 새로운 객체를 생성
 > - toString() - 객체를 표현하는 문자열을 반환
 > - equals(Object) - 두 객체의 비교
->
 > - finalize() - 메모리 회수시 호출
 
 이러한 Object 클래스를 상속하는 데이터 타입 관련 클래스로는 **String**, **Wrapper** 클래스가 존재하는데 하나씩 살펴보자.
@@ -225,9 +224,9 @@ class Person {
 >
 > ```java
 > int primNum = 20;
-> Integer autoWrapperNum = primNum						//AutoBoxing
+> Integer autoWrapperNum = primNum		//AutoBoxing
 > Integer wrapperNum = new Integer(primNum); 	//Boxing
-> int unBoxedNum = (int)wrapper 							//Unboxing
+> int unBoxedNum = (int)wrapper 		//Unboxing
 > ```
 
 ---
@@ -241,5 +240,4 @@ class Person {
 - [자바의 변수와 데이터 타입 (Java Variables & Data type)](https://futurecreator.github.io/2017/01/27/java-variable-data-type/)
 - [[JAVA] Primitive type과 Reference type 그리고 Object 클래스](https://ironmask.net/271)
 - [자바의 데이터 타입(Primitive type, Reference type)](https://gbsb.tistory.com/6?category=735872)
-
-* [자바 자료형 정리(Java Data Type](https://jdm.kr/blog/213)
+- [자바 자료형 정리(Java Data Type](https://jdm.kr/blog/213)
