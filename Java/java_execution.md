@@ -1,4 +1,4 @@
-<img src="image/java_execution_main.png" width=100% height="400">
+<img src="image/java_execution_main.png" width=100%>
 
 # Java 코드가 실행되기 까지의 여정
 
@@ -100,7 +100,7 @@ int jong = "nan";
 
 각자의 하나씩의 프로그램만 만들면 되기 때문에 효율성이 높아진다.
 
-이 단계에서는 중간 코드를 생성하는 것뿐만 아니라 여지것 만들어왔던 정보들로 클래스/인터페이스의 **상수 풀(Constant Pool)**을 만드는 데 사용된다.  
+이 단계에서는 중간 코드를 생성하는 것뿐만 아니라 여지것 만들어왔던 정보들로 클래스/인터페이스의 **상수 풀**(Constant Pool)을 만드는 데 사용된다.  
 상수 풀의 경우 실제로 코드가 돌아가면서 클래스/인터페이스가 생성될 때 사용하는 Run-Time Constant Pool을 구성하는데 사용된다.
 
 ### 중간 코드 최적화(Code Optimization)
@@ -129,7 +129,7 @@ int jong = "nan";
 ## JVM의 외부 환경 및 구동 준비
 
 자바 어플리케이션을 실행하는 명령어는 `java`이다.  
-이 명령어는 **JRE(Java Runtime Environment)**를 시작하고, 인자로 지정된 클래스를 로딩 후에 `main()` 메소드를 호출한다.
+이 명령어는 **JRE**(Java Runtime Environment)를 시작하고, 인자로 지정된 클래스를 로딩 후에 `main()` 메소드를 호출한다.
 
 자바로 프로그래밍을 하다보면 JDK, JRE 등등 많이 들어봤을 것이다.  
 이들의 상관 관계는 다음 그림과 같다.
