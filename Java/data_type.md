@@ -184,7 +184,7 @@ class Person {
   ```java
   String name = "jongnan";
   name += "a";              //기존 문자열을 사용하는 것이 아닌, jongnana이라는 새로운 문자열을 생성
-  System.out.println(name); // output : jongnana 
+  System.out.println(name); //output : jongnana 
   ```
 
 * **Wrapper Class**
