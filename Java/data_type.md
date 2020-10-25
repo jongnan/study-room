@@ -117,9 +117,9 @@ for(int idx = 0; idx < array_1.size(); idx++){
 배열 타입은 기본형 혹은 참조형으로도 만들 수 있다.  
 
 ```java
-int [] numArr = new int[5];		  //기본형
+int [] numArr = new int[5];               //기본형
 int [][] twoDimenNumArr = new int[5][5];  //[][]를 사용하면 2차원 배열을 만들 수 있다.
-Object[] objectArr = new Object[5];	  //참조형
+Object[] objectArr = new Object[5];       //참조형
 ```
 
 ### Enum
@@ -183,8 +183,8 @@ class Person {
 
   ```java
   String name = "jongnan";
-  name += "a";	           //기존 문자열을 사용하는 것이 아닌, jongnana이라는 새로운 문자열을 생성
-  System.out.println(name) // output : jongnana 
+  name += "a";              //기존 문자열을 사용하는 것이 아닌, jongnana이라는 새로운 문자열을 생성
+  System.out.println(name); // output : jongnana 
   ```
 
 * **Wrapper Class**
@@ -224,9 +224,9 @@ class Person {
 
   ```java
   int primNum = 20;
-  Integer autoWrapperNum = primNum		        //AutoBoxing
-  Integer wrapperNum = new Integer(primNum); 	//Boxing
-  int unBoxedNum = (int)wrapper 		          //Unboxing
+  Integer autoWrapperNum = primNum;           //AutoBoxing
+  Integer wrapperNum = new Integer(primNum);  //Boxing
+  int unBoxedNum = (int)wrapper;              //Unboxing
   ```
 
 <br>
