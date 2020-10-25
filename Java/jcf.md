@@ -17,13 +17,13 @@
 
 ## Collections Framework Structure
 
-<img src="image/jcf_structure.png" width=1000>
+<p align="center"><img src="image/jcf_structure.png" width=800></p>
 
 컬렉션즈의 구조는 위 그림과 같이 되어있다.   
 우리가 많이 봤던 Stack, Queue, Map들이 여러가지 구현체로 구현되어있는 것을 볼 수 있다.
 
-일단, 컬렉션즈는 크케 **List**, **Set**, **Map** 으로 나뉘게 되는데 Map만 따로 Collection을 상속 하지 않는것을 볼 수 있다.  
-Map의 경우, **키와 값** 으로 이루어진 자료구조이며 이는 나머지 자료구조(List, Set...)등과 같이 값만 저장하는 구조상 차이를 가지고 있다.  
+일단, 컬렉션즈는 크게 **List**, **Set**, **Map**으로 나뉘게 되는데 Map만 따로 Collection을 상속 하지 않는것을 볼 수 있다.  
+Map의 경우, **키와 값**으로 이루어진 자료구조이며 이는 나머지 자료구조(List, Set...)등과 같이 값만 저장하는 구조상 차이를 가지고 있다.  
 따라서 Map은 Collection 인터페이스를 상속 받지 않는다.
 
 또한, 컬렉션즈의 모든 데이터의 형태는 객체로 기본형 데이터 타입은 Wrapper 클래스를 통해 객체로 변경 후에 사용이 가능하다.
@@ -46,7 +46,7 @@ Map의 경우, **키와 값** 으로 이루어진 자료구조이며 이는 나�
 데이터들의 순서를 관리하기 위해 데이터들에 인덱스를 부여하고 이를 통해 접근이 가능하다.  
 이때, 인덱스마다 객체를 저장하는 것이 아닌 객체의 주소를 가지고 있으며 동일한 객체의 주소를 중복으로 저장할 수 있다.
 
-구현체로는 **ArrayList**, **LinkedList**, **Vector**, **Stack** 등이 있다.
+구현체로는 **ArrayList**, **LinkedList**, **Vector**, **Stack**등이 있다.
 
 ### ArrayList
 
