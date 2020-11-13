@@ -63,3 +63,6 @@
 * [이벤트 버블링 VS 이벤트 캡쳐링](/Front-End/bubbling_capturing.md)
 
 ### Back-End
+
+* [URL에서 요청 정보 얻기 feat.Spring (@RequestParam, @PathVariable)](/Back-End/url_request_spring.md)
+
