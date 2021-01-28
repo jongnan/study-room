@@ -70,5 +70,6 @@
 
 ## Spring In Action 🥊
 
-* 1장 : 스프링 시작하기 - [요약](/Spring-In-Action/1장.md)
+* 1장 : 스프링 시작하기 - [요약](/Spring-In-Action/Ch_1.md)
+* 2장 : 웹 애플리케이션 개발하기 - [요약](/Spring-In-Action/Ch_2.md)
 
