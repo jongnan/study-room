@@ -50,7 +50,7 @@ public DataSource dataSource() {
 ```yaml
 # application.yml
 server:
-	port : 8081
+  port : 8081
 ```
 
 이 방법 외에도 애플리케이션을 시작할 때 명령행 인자로 넘길 수도 있고, 운영체제 환경변수에 설정할 수도 있다.
@@ -80,8 +80,8 @@ public class OrderProps {
 
 ```yaml
 taco:
-	orders:
-		pageSize: 10
+  orders:
+    pageSize: 10
 ```
 
 다음과 같이 속성을 설정했다면 한 페이지에 최대 주문 개수는 10개가 된다.
@@ -123,21 +123,21 @@ taco:
 
 ```yaml
 logging:
-	level:
-		tacos: DEBUG
+  level:
+    tacos: DEBUG
 		
 ---
 
 spring:
-	profiles: prod
-	datasource:
-		url: jdbc:mysql://localhost/tacocloud
-		username: user
-		password: pass
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://localhost/tacocloud
+    username: user
+    password: pass
 		
 logging:
-	level:
-		tacos: WARN
+  level:
+    tacos: WARN
 ```
 
 하이픈 윗부분은 spring.profiles를 설정하지 않았기 때문에 모든 프로파일에 공통적으로 적용된다. 밑 부분은 prod로 설정을 했기 때문에 prod 환경일 때만 설정된다.
@@ -149,9 +149,9 @@ logging:
 ```yaml
 # application.yml
 spring:
-	profiles:
-		active:
-		- prod
+  profiles:
+    active:
+    - prod
 ```
 
 하지만, 다음과 같이 `application.yml`에 설정을 해버리면 해당 프로파일이 기본 프로파일이 되기 때문에 **환경 변수를 사용하여 활성화를 하는 것을 권장**한다. 이 외에도 JAR 파일을 실행할 때 명령행 인자로 활성화를 설정할 수 있다.
