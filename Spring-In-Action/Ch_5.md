@@ -125,7 +125,7 @@ taco:
 logging:
   level:
     tacos: DEBUG
-		
+
 ---
 
 spring:
@@ -134,7 +134,7 @@ spring:
     url: jdbc:mysql://localhost/tacocloud
     username: user
     password: pass
-		
+
 logging:
   level:
     tacos: WARN
