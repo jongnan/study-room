@@ -73,3 +73,5 @@
 * 1장 : 스프링 시작하기 - [요약](/Spring-In-Action/Ch_1.md)
 * 2장 : 웹 애플리케이션 개발하기 - [요약](/Spring-In-Action/Ch_2.md)
 
+* 3장 : 데이터로 작업하기 - [요약](/Spring-In-Action/Ch_3.md)
+* 4장 : 스프링 시큐리티 - [요약](/Spring-In-Action/Ch_4.md)
