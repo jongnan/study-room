@@ -75,3 +75,4 @@
 * 3장 : 데이터로 작업하기 - [요약](/Spring-In-Action/Ch_3.md)
 * 4장 : 스프링 시큐리티 - [요약](/Spring-In-Action/Ch_4.md)
 * 5장 : 구성 속성 사용하기 - [요약](/Spring-In-Action/Ch_5.md)
+* 6장: REST 서비스 구성하기 - [요약](/Spring-In-Action/Ch_6.md)
