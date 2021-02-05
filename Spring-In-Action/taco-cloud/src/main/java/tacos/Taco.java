@@ -1,6 +1,7 @@
 package tacos;
 
 import lombok.Data;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -10,13 +11,14 @@ import java.util.List;
 
 @Data
 @Entity
+@RestResource(rel = "tacos", path = "tacos")
 public class Taco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Date createAt;
+    private Date createdAt;
 
     @NotNull
     @Size(min=5, message="Name must bo at least 5 characters long")
@@ -28,6 +30,6 @@ public class Taco {
 
     @PrePersist
     void createdAt() {
-        this.createAt = new Date();
+        this.createdAt = new Date();
     }
 }

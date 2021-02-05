@@ -35,7 +35,12 @@ public class DesignTacoController {
     public String showDesignForm(Model model, Principal principal) {
 
         List<Ingredient> ingredients = new ArrayList<>();
-        ingredientRepo.findAll().forEach(ingredients::add);
+        Iterable<Ingredient> ingredients1 = ingredientRepo.findAll();
+
+        ingredientRepo.findAll().forEach((ingredient) -> {
+            log.info(ingredient.getName());
+            ingredients.add(ingredient);
+        });
 
         Ingredient.Type[] types = Ingredient.Type.values();
         for(Ingredient.Type type : types) {
@@ -45,7 +50,8 @@ public class DesignTacoController {
         String username = principal.getName();
         User user = userRepo.findByUsername(username);
         model.addAttribute("user", user);
-
+        log.info(model.getAttribute("wrap").toString());
+        log.info(model.getAttribute("user").toString());
         return "design";
     }
 
