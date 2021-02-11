@@ -6,3 +6,6 @@ spring:
   data:
     rest:
       base-path: /api
+  jms:
+    template:
+      default-destination: tacocloud.order.queue
