@@ -66,8 +66,8 @@ JmsTemplate 안에는 `send()`, `convertAndSend()` 라는 두가지 종류의 �
 ```java
 @Override
 public void convertAndSend(Destination destination, final Object message) throws JmsException {
-		send(destination, session -> getRequiredMessageConverter().toMessage(message, session));
-	}
+  send(destination, session -> getRequiredMessageConverter().toMessage(message, session));
+}
 ```
 
 위 코드는 여러개의 `convertAndSend()` 중 하나만 가져온 것이다. 내부적으로 `send()` 메소드를 호출하는 것을 볼 수 있으며, 그 안에서 메시지를 변환하는 것 또한 볼 수 있다. 
@@ -98,10 +98,10 @@ public void convertAndSend(Destination destination, final Object message) throws
 ```java
 @Override
 public void send(final Destination destination, final MessageCreator messageCreator) throws JmsException {
-	execute(session -> {
-		doSend(session, destination, messageCreator);
-		return null;
-	}, false);
+  execute(session -> {
+    doSend(session, destination, messageCreator);
+    return null;
+  }, false);
 }
 ```
 
@@ -109,34 +109,33 @@ public void send(final Destination destination, final MessageCreator messageCrea
 
 ```java
 @Nullable
-	public <T> T execute(SessionCallback<T> action, boolean startConnection) throws JmsException {
-		Assert.notNull(action, "Callback object must not be null");
-		Connection conToClose = null;
-		Session sessionToClose = null;
-		try {
-			Session sessionToUse = ConnectionFactoryUtils.doGetTransactionalSession(
-					obtainConnectionFactory(), this.transactionalResourceFactory, startConnection);
-			if (sessionToUse == null) {
-				conToClose = createConnection();
-				sessionToClose = createSession(conToClose);
-				if (startConnection) {
-					conToClose.start();
-				}
-				sessionToUse = sessionToClose;
-			}
-			if (logger.isDebugEnabled()) {
-				logger.debug("Executing callback on JMS Session: " + sessionToUse);
-			}
-			return action.doInJms(sessionToUse);
-		}
-		catch (JMSException ex) {
-			throw convertJmsAccessException(ex);
-		}
-		finally {
-			JmsUtils.closeSession(sessionToClose);
-			ConnectionFactoryUtils.releaseConnection(conToClose, getConnectionFactory(), startConnection);
-		}
-	}
+public <T> T execute(SessionCallback<T> action, boolean startConnection) throws JmsException {
+  Assert.notNull(action, "Callback object must not be null");
+  Connection conToClose = null;
+  Session sessionToClose = null;
+  try {
+    Session sessionToUse = ConnectionFactoryUtils.doGetTransactionalSession(obtainConnectionFactory(), this.transactionalResourceFactory, startConnection);
+    if (sessionToUse == null) {
+      conToClose = createConnection();
+      sessionToClose = createSession(conToClose);
+      if (startConnection) {
+        conToClose.start();
+      }
+      sessionToUse = sessionToClose;
+    }
+    if (logger.isDebugEnabled()) {
+      logger.debug("Executing callback on JMS Session: " + sessionToUse);
+    }
+    return action.doInJms(sessionToUse);
+  }
+  catch (JMSException ex) {
+    throw convertJmsAccessException(ex);
+  }
+  finally {
+    JmsUtils.closeSession(sessionToClose);
+    ConnectionFactoryUtils.releaseConnection(conToClose, getConnectionFactory(), startConnection);
+  }
+}
 ```
 
 `excute()` 메서드는 다음과 같은 모습을 하고 있다. 코드를 살펴보면 브로커와의 연결 그리고 세션 생성, 메시지 보내기, 세션과 연결 끊기를 수행하고 있다. 이 부분이 앞서 말했듯 우리는 메시지를 보내는 것에만 집중할 수 있도록 해주는 곳이다. 이제 이들을 사용하는 방법을 알아보자.
@@ -146,18 +145,18 @@ public void send(final Destination destination, final MessageCreator messageCrea
 @RequiredArgsConstructor
 public class JmsOrderMessagingService implements OrderMessagingService{
 
-    private final JmsTemplate jms;
+  private final JmsTemplate jms;
 
-    @Override
-    public void sendOrder(Order order) {
-    		jms.send(session -> session.createObjectMessage(order))
-        jms.convertAndSend("tacocloud.order.queue", order, this::addOrderSource);
-    }
+  @Override
+  public void sendOrder(Order order) {
+    jms.send(session -> session.createObjectMessage(order))
+    jms.convertAndSend("tacocloud.order.queue", order, this::addOrderSource);
+  }
 
-    private Message addOrderSource(Message message) throws JMSException {
-        message.setStringProperty("X_ORDER_SOURCE", "WEB");
-        return message;
-    }
+  private Message addOrderSource(Message message) throws JMSException {
+    message.setStringProperty("X_ORDER_SOURCE", "WEB");
+    return message;
+  }
 }
 ```
 
@@ -289,10 +288,10 @@ RabbitMQ 스타터의 핵심은 **RabbitTemplate** 이다. RabbitTemplate는 Jms
 private final RabbitTemplate rabbit;
 
 public void sendOrder(Order order) {	
-	MessageConverter converter = rabbit.getMessageConverter();
-	MessageProperties props = new MessageProperties();
-	Message message = converter.toMessage(order, props);
-	rabbit.send("tacocloud.order", message);
+  MessageConverter converter = rabbit.getMessageConverter();
+  MessageProperties props = new MessageProperties();
+  Message message = converter.toMessage(order, props);
+  rabbit.send("tacocloud.order", message);
 }
 ```
 
@@ -304,7 +303,7 @@ public void sendOrder(Order order) {
 
 ```java
 public void sendOrder(Order order) {	
-	rabbit.convertAndSend("tacocloud.order", order);
+  rabbit.convertAndSend("tacocloud.order", order);
 }
 ```
 
@@ -375,8 +374,7 @@ public Order receiveOrder() {
 
 ```java
 public Order receiveOrder() {
-  return rabbit.receiveAndConvert("tacocloud.orders",
-                                 new ParameterizedTypeReference<Order>(){});
+  return rabbit.receiveAndConvert("tacocloud.orders", new ParameterizedTypeReference<Order>(){});
 }
 ```
 
@@ -423,11 +421,11 @@ implementation 'org.springframework.kafka:spring-kafka'
 
 ```yaml
 spring:
-	kafka:
-		bootstrap-servers:
-		- kafka.tacocloud.com:9092
-		- kafka.tacocloud.com:9093
-		- kafka.tacocloud.com:9094
+  kafka:
+    bootstrap-servers:
+    - kafka.tacocloud.com:9092
+    - kafka.tacocloud.com:9093
+    - kafka.tacocloud.com:9094
 ```
 
 ### 메시지 전송
@@ -454,9 +452,9 @@ public void sendOrder() {
 
 ```yaml
 spring:
-	kafka:
-		template:
-			default-topic: tacocloud.orders.topic
+  kafka:
+    template:
+      default-topic: tacocloud.orders.topic
 ```
 
 ```java
