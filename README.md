@@ -76,3 +76,5 @@
 * 4장 : 스프링 시큐리티 - [요약](/Spring-In-Action/Ch_4.md)
 * 5장 : 구성 속성 사용하기 - [요약](/Spring-In-Action/Ch_5.md)
 * 6장: REST 서비스 구성하기 - [요약](/Spring-In-Action/Ch_6.md)
+* 7장: REST 서비스 사용하기 - [요약](/Spring-In-Action/Ch_7.md)
+* 8장: 비동기 메시지 전송하기 - [요약](/Spring-In-Action/Ch_8.md)
