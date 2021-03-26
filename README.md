@@ -81,3 +81,4 @@
 * 9장: 스프링 통합하기
 * 10장: [리액터 개요](/Spring-In-Action/Ch_10.md)
 * 11장: [리액티브 API 개발하기](/Spring-In-Action/Ch_11.md)
+* 12장: [리액티브 데이터 퍼시스턴스](/Spring-In-Action/Ch_12.md)
