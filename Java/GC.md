@@ -174,25 +174,50 @@ Old 영역에서 기본적으로 메모리가 꽉차게 되면 GC를 발생하�
 
   초기 Initial Mark 단계에서는 클래스 로더에서 가장 가까운 객체 중 살아 있는 객체만 찾는 것으로 끝낸다. 따라서 Stop-the-world이 너무 짧다.
   
-다음으로는 Concurrent Mark 단계에서는 Initial Mark 단계에서 확인한 객체에서 참조하고 있는 객체 들을 따라 가며 확인을 하는데 해당 단계에서는 병렬로 처리가 된다.
+  다음으로는 Concurrent Mark 단계에서는 Initial Mark 단계에서 확인한 객체에서 참조하고 있는 객체 들을 따라 가며 확인을 하는데 해당 단계에서는 병렬로 처리가 된다.
   
-Remark 단계에서는 이전 단게에서 새로 추가 되거나 참조가 끊긴 객체를 찾으며, 마지막 Concureent Sweep 단계 에서는 쓰레기 객체를 정리하는 작업을 실시한다.
+  Remark 단계에서는 이전 단게에서 새로 추가 되거나 참조가 끊긴 객체를 찾으며, 마지막 Concurrent Sweep 단계 에서는 쓰레기 객체를 정리하는 작업을 실시한다.
   
-이와 같은 단계로 진행되므로 Stop-the-world 시간이 굉장이 짧지만, 다른 GC에 비해 메모리와 CPU를 많이 사용하며 Compaction 단계가 기본적으로 제공되지 않으므로 단편화가 일어날 수 있는 단점이 있다.
+  이와 같은 단계로 진행되므로 Stop-the-world 시간이 굉장이 짧지만, 다른 GC에 비해 메모리와 CPU를 많이 사용하며 Compaction 단계가 기본적으로 제공되지 않으므로 단편화가 일어날 수 있는 단점이 있다.
   
-이로 인해 CMS GC는 JDK 9 부터는 deprecated되었다.
+  이로 인해 CMS GC는 JDK 9 부터는 deprecated되었다.
   
-* **G1 GC**
+* **G1(Garbage-First) GC**
 
-  CMS GC를 보완하기 위해 나온 GC로 대량의 힙과 멀티 프로세서 환경에서 사용되도록 만들어졌으며, JDK 7 Update 4 부터 공식적으로 도입되었다.
+  CMS GC를 보완하기 위해 나온 GC로 대량의 힙과 멀티 프로세서 환경에서 사용되도록 만들어졌으며, JDK 7 Update 4 부터 공식적으로 도입되었다(JDK 9부터 디폴트). 해당 GC는 쓰레기로 가득한 Heap 영역을 집중적으로 수집한다.
 
   G1 GC는 기존 GC들과 다른점이 있는데 바로, 메모리를 페이징 하듯 논리적인 단위로 나눠서 관리한다는 것이다.
 
   <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FND99u%2Fbtqvt7WGCt0%2FIYR53llz43qHJaaGzMnixk%2Fimg.png" width="400">
 
-  출처 : [Garbage Collection (Hotspot JVM GC)](https://lazymankook.tistory.com/83)
+  </t> 출처 : [Garbage Collection (Hotspot JVM GC)](https://lazymankook.tistory.com/83)
 
-  위의 그림처럼 바둑판 같은 공간이 논리적 단위(Region)이다. CMS와는 달리 Compaction 단계를 진행하며 단편화 문제를 없앴으며, Stop-the-world의 시간을 예측할 수 있다는 것이 가장 큰 장점중 하나이다.
+  위의 그림처럼 바둑판 같은 공간이 논리적 단위(Region)이다. 비어있는 영역에만 새로운 객체가 들어가며 쓰레기가 꽉 찬 영역을 우선적으로 청소한다. 청소시에는 STW를 줄이기 위해 병렬로 진행하며 각각의 스레드가 자신만의 영역을 지정하여 작업하는 방식으로 이루어진다.
+
+  ##### 작업 방식
+
+  G1의 경우 두 페이즈를 번갈아 가며 GC 작업을 수행한다.
+
+  1. Young-Only 페이즈
+
+     > Old 객체를 새로운 공간으로 옮기는 과정
+     >
+     > * Old generation의 점유율이 임계치를 넘어서면 해당 페이즈로 전환
+     > * 도달할 수 있는 객체들에 마킹 작업(Concurrent Start)
+     >   SATB(Snapshot-At-The-Beginning) 알고리즘 사용
+     > * Space-Reclamation 페이즈로 갈지를 판단(Cleanup)
+
+  2. Space-Reclamation 페이즈
+
+     > 공간을 회수하는 과정
+     >
+     > * Young/Old 가리지 않고 살아있는 객체를 적절한 공간으로 대피(Evacuation)
+     > * 작업의 효율이 떨어지면 해당 페이즈 종료 및 다시 Young-Only 페이즈로 전환
+
+  ##### 다른 GC와 비교
+
+  * Parallel GC는 Old Generation에서만 재확보와 압축(Compaction)이 이루어 지지만 G1 GC는 모든 영역에서 이를 수행한다.
+  * Concurrent Mark Sweep GC와는 다르게 Compaction 작업을 하여 단편화 문제를 없앴다.
 
 ---
 
@@ -205,4 +230,5 @@ Remark 단계에서는 이전 단게에서 새로 추가 되거나 참조가 끊
 *  [[JVM] Garbage Collection Algorithms](https://medium.com/@joongwon/jvm-garbage-collection-algorithms-3869b7b0aa6f)
 *  [자바 메모리 관리 - 가비지 컬렉션](https://yaboong.github.io/java/2018/06/09/java-garbage-collection/)
 *  [NAVER D2 - Java Garbage Collection](https://d2.naver.com/helloworld/1329)
+*  [Java HotSpot VM G1GC - 기계인간 John Grib](https://johngrib.github.io/wiki/java-g1gc/)
 
