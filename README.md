@@ -39,14 +39,14 @@
 * [Java 코드가 실행되기 까지의 여정](/Java/java_execution.md)
 * [Collections Framework](/Java/jcf.md)
 
-### Javascript
+### JavaScript
 
-* [ECMAScript](/Javascript/ecmascript.md)
-* [Javascript 동작원리 - 엔진편](/Javascript/javascript_mechanism_engine.md)
-* [Javascript 동작원리 - 런타임편](/Javascript/javascript_mechanism_runtime.md)
-* [Sync/Async VS Blocking/Non-Blocking](/Javascript/sync_async_blocking_nonBlocking.md)
-* [Execution Context](/Javascript/execution_context.md)
-* [Prototype](/Javascript/prototype.md)
+* [ECMAScript](/JavaScript/ecmascript.md)
+* [JavaScript 동작원리 - 엔진편](/JavaScript/javascript_mechanism_engine.md)
+* [JavaScript 동작원리 - 런타임편](/JavaScript/javascript_mechanism_runtime.md)
+* [Sync/Async VS Blocking/Non-Blocking](/JavaScript/sync_async_blocking_nonBlocking.md)
+* [Execution Context](/JavaScript/execution_context.md)
+* [Prototype](/JavaScript/prototype.md)
 
 <br>
 
@@ -82,3 +82,10 @@
 * 10장: [리액터 개요](/Spring-In-Action/Ch_10.md)
 * 11장: [리액티브 API 개발하기](/Spring-In-Action/Ch_11.md)
 * 12장: [리액티브 데이터 퍼시스턴스](/Spring-In-Action/Ch_12.md)
+
+<br>
+
+## 자바 ORM 표준 JPA 프로그래밍
+
+* 1장 : [JPA 소개](/JPA/01.md)
+
