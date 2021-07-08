@@ -1,0 +1,12 @@
+model/entity/QTeam.class
+model/entity/Member.class
+model/entity/ProductExpression.class
+model/entity/Product.class
+model/entity/Team.class
+model/entity/Order.class
+model/entity/QMember.class
+model/entity/QProduct.class
+model/entity/Address.class
+model/entity/QOrder.class
+model/Main.class
+model/entity/QAddress.class
