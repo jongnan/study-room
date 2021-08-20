@@ -88,6 +88,7 @@
 ## Kotlin In Action
 
 * 1장 : [코틀린이란 무엇이며, 왜 필요한가](/Kotlin/ch01.md)
+* 2장 : [코틀린 기초](/Kotlin/ch02.md)
 
 <br>
 
